@@ -5,7 +5,7 @@ from scipy.optimize import minimize
 
 def calculate_empirical_rademacher_complexity(K: int,
                                               hypothesis_class,
-                                              max_iter_maximization: float = 1000):
+                                              max_iter_maximization: float = 1000) -> float:
     training_data = hypothesis_class.training_data
     empirical_suprema_rademacher = []
     for _ in tqdm(range(K)):
